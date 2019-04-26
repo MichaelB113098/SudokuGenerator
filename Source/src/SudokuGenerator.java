@@ -101,6 +101,7 @@ public class SudokuGenerator {
 	public static boolean fillRest(String[][] board, int i, int j, SudokuGrid sg, JFrame frame) throws InterruptedException
 	{
 		
+		
 		if (board[i][j] != ".") ///If current square is filled
 		{
 			if (i == board.length - 1 && j == board[i].length - 1) ///If end of list return true
@@ -122,6 +123,8 @@ public class SudokuGenerator {
 			randomNums[k] = k + 1;
 		}
 		List<Integer> numList = Arrays.asList(randomNums);
+		Collections.shuffle(numList);
+		Collections.shuffle(numList);
 		Collections.shuffle(numList);
 		
 		for (int k = 0; k < numList.size(); k++)
