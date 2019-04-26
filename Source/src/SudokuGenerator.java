@@ -164,8 +164,8 @@ public class SudokuGenerator {
 				}
 			}
 		}
+		sg.sudokuArray[i][j].setColor(Color.red);
 		board[i][j] = ".";
-		sg.sudokuArray[i][j].setDigit("", Color.red);
 		return false;
 	}
 	public static boolean isValid(String val, String[][] board, int row, int column)
